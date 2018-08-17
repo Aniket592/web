@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 100%;
+}
+
+section {
+  background-color: #99ffff ;
+  padding: 5% 15%;
+  margin: 0 auto;
+}
