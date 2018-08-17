@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Mars Futurism</title>
     <script type='text/javascript' src="../static/js/home_jquery.js"></script>
     <link rel="stylesheet" href="../static/css/home_style.css">
     <link rel="stylesheet" href="../static/css/loader.css">
@@ -60,19 +61,49 @@
         background-color: rgb(216, 106, 167);
       }
       .dot1 {
-        top:54%;
-        margin-top: 20px;
-      }
-      .dot2 {
         top:56%;
         margin-top: 20px;
       }
+      .dot2 {
+        top:60%;
+        margin-top: 20px;
+      }
       .dot3 {
-        top:58%;
+        top:64%;
         margin-top: 20px;
       }
 }
 
+@media (max-width:300px) {
+    .dot,.dot1,.dot2,.dot3 {
+        position:fixed;
+        right:20px;
+        top:52%;
+        height: 15px;
+        margin-top: 10px;
+        width: 15px;margin: 10px 5px;
+        background-color: #8B8F91;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: 100;
+        margin-top: 20px;
+      }
+      .dot:hover,.dot1:hover,.dot2:hover,.dot3:hover{
+        background-color: rgb(216, 106, 167);
+      }
+      .dot1 {
+        top:56%;
+        margin-top: 20px;
+      }
+      .dot2 {
+        top:60%;
+        margin-top: 20px;
+      }
+      .dot3 {
+        top:64%;
+        margin-top: 20px;
+      }
+}
 @media (max-width:568px) {
             .dot,.dot1,.dot2,.dot3 {
             position:fixed;

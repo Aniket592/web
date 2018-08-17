@@ -4,10 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Sign Up</title>
-  
+       <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
+       <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="HandheldFriendly" content="true">
       <link rel="stylesheet" href="../static/css/style_sign.css">
       <style type="text/css">
-            .left_top {
+            .dot,.dot1,.dot2,.dot3,.left_top {
+            position:fixed;
+            right:20px;
+            height: 15px;
+            width: 15px;
+            background-color: #8B8F91;
+            border-radius: 50%;
+            display: inline-block;
+            z-index: 100;
+          }
+          .dot:hover,.dot1:hover,.dot2:hover,.dot3:hover{
+            background-color: rgb(216, 106, 167);
+          }
+          .dot1 {
+            top:50%;
+          }
+          .dot2 {
+            top:56%;
+          }
+          .dot3 {
+            top:60%;
+          }
+          .left_top {
             position:fixed;
             left:10px;
             top:10px;
@@ -20,6 +47,95 @@
             display: inline-block;
             z-index: 100;
           }
+@media (min-width:480px) {
+    .dot,.dot1,.dot2,.dot3 {
+        position:fixed;
+        right:20px;
+        top:52%;
+        height: 15px;
+        margin-top: 10px;
+        width: 15px;margin: 10px 5px;
+        background-color: #8B8F91;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: 100;
+        margin-top: 20px;
+      }
+      .dot:hover,.dot1:hover,.dot2:hover,.dot3:hover{
+        background-color: rgb(216, 106, 167);
+      }
+      .dot1 {
+        top:56%;
+        margin-top: 20px;
+      }
+      .dot2 {
+        top:60%;
+        margin-top: 20px;
+      }
+      .dot3 {
+        top:64%;
+        margin-top: 20px;
+      }
+}
+
+@media (max-width:300px) {
+    .dot,.dot1,.dot2,.dot3 {
+        position:fixed;
+        right:20px;
+        top:52%;
+        height: 15px;
+        margin-top: 10px;
+        width: 15px;margin: 10px 5px;
+        background-color: #8B8F91;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: 100;
+        margin-top: 20px;
+      }
+      .dot:hover,.dot1:hover,.dot2:hover,.dot3:hover{
+        background-color: rgb(216, 106, 167);
+      }
+      .dot1 {
+        top:56%;
+        margin-top: 20px;
+      }
+      .dot2 {
+        top:60%;
+        margin-top: 20px;
+      }
+      .dot3 {
+        top:64%;
+        margin-top: 20px;
+      }
+}
+@media (max-width:568px) {
+            .dot,.dot1,.dot2,.dot3 {
+            position:fixed;
+            right:20px;
+            top:50%;
+            height: 15px;
+            margin-top: 10px;
+            width: 15px;margin: 10px 5px;
+            background-color: #8B8F91;
+            border-radius: 50%;
+            display: inline-block;
+            z-index: 100;
+          }
+          .dot:hover,.dot1:hover,.dot2:hover,.dot3:hover{
+            background-color: rgb(216, 106, 167);
+          }
+          .dot1 {
+            top:52%;
+          }
+          .dot2 {
+            top:54%;
+          }
+          .dot3 {
+            top:56%;
+          }
+}
+
+    
       </style>
   
 </head>
@@ -42,8 +158,8 @@
 
     <form action="" class="log-in" method="POST" autocomplete="off"> 
       {% csrf_token %}
-      <h4>Register To  <span>MARS FUTURISM</span></h4>
-      <p>Welcome back! Log in to your account to view today's clients:</p>
+      <h4>Register To <br> <span>MARS FUTURISM</span></h4>
+      
 
       <div class="floating-label">
         <input type="text" name="name" maxlength="100" required id="id_name">
@@ -215,7 +331,9 @@
 </body>
   
   
-
+              <a href="{% url 'description' %}" class="dot" title="Discription"></a>
+                <a href="{% url 'achievements' %}" class="dot1" title="Achievements"></a> 
+                <a href="{% url 'timeline' %}" class="dot2" title="Timeline"></a>
 </body>
 
 </html>
